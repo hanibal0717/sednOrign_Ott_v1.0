@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 이 module에 대한 include 구문을 PercentRelativeLayout으로 감싸서 크기를 596x424로 맞춰야 함 -->
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+    <!-- 전체 596 x 370 -->
+
+    <!-- Pixel 직접 지정. percent layout은 무시함. -->
+
+    <!-- preview 영역 454x310 (30,30) -->
+    <RelativeLayout
+        android:id="@+id/layoutPreviewThumbnail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="76.1745%"
+        app:layout_heightPercent="83.7838%"
+        app:layout_marginLeftPercent="5.0336%"
+        app:layout_marginTopPercent="8.1081%">
+        <ImageView
+            android:id="@+id/ivPreview_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@drawable/thumbnail_small"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/thumbnailBGColor"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10px"
+            android:layout_marginLeft="12px">
+            <ImageView
+                android:layout_width="20px"
+                android:layout_height="16px"
+                android:src="@drawable/vodlist_calaner"/>
+            <TextView
+                android:id="@+id/tvVODDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4px"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="20px"
+                android:text="2016-08-21"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10px"
+            android:layout_marginRight="12px">
+            <ImageView
+                android:layout_width="17px"
+                android:layout_height="17px"
+                android:src="@drawable/vodlist_clock"/>
+            <TextView
+                android:id="@+id/tvVODTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4px"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="20px"
+                android:text="01:23:34"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10px"
+            android:layout_marginRight="12px">
+            <ImageView
+                android:layout_width="20px"
+                android:layout_height="16px"
+                android:src="@drawable/vodlist_icon_hit"/>
+            <TextView
+                android:id="@+id/tvVODHit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4px"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="20px"
+                android:text="100"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvVODCate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="123px"
+            android:textColor="@color/white"
+            android:textSize="23px"/>
+        <TextView
+            android:id="@+id/tvVODTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="155px"
+            android:textColor="@color/white"
+            android:textSize="30px"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <!--  h : 64, padding t,b : 10, margin t : 16 -->
+    <com.inucreative.sednlauncher.CustomView.PercentImageView
+        android:id="@+id/ivPreview_play"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="10.7383%"
+        app:layout_heightPercent="17.2973%"
+        android:layout_toRightOf="@id/layoutPreviewThumbnail"
+        android:layout_alignTop="@id/layoutPreviewThumbnail"
+        app:paddingTopPercent="2.7027"
+        app:paddingBottomPercent="2.7027"
+        app:paddingLeftPercent="1.6779"
+        app:paddingRightPercent="1.6779"
+        app:layout_marginLeftPercent="4.5302%"
+        app:layout_marginTopPercent="0.8108%"
+        android:focusable="true"
+        android:clickable="true"
+        android:nextFocusDown="@+id/ivPreview_bookmark"
+        android:src="@drawable/icon_play"
+        android:background="@drawable/selector_preview_icon"/>
+
+    <com.inucreative.sednlauncher.CustomView.PercentImageView
+        android:id="@+id/ivPreview_bookmark"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="10.7383%"
+        app:layout_heightPercent="17.2973%"
+        android:layout_below="@id/ivPreview_play"
+        android:layout_alignLeft="@id/ivPreview_play"
+        app:paddingTopPercent="2.7027"
+        app:paddingBottomPercent="2.7027"
+        app:paddingLeftPercent="1.6779"
+        app:paddingRightPercent="1.6779"
+        app:layout_marginTopPercent="4.3243%"
+        android:focusable="true"
+        android:clickable="true"
+        android:nextFocusDown="@+id/ivPreview_download"
+        android:nextFocusUp="@+id/ivPreview_play"
+        android:src="@drawable/icon_bookmark"
+        android:background="@drawable/selector_preview_icon"/>
+
+    <com.inucreative.sednlauncher.CustomView.PercentImageView
+        android:id="@+id/ivPreview_download"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="10.7383%"
+        app:layout_heightPercent="17.2973%"
+        android:layout_below="@id/ivPreview_bookmark"
+        android:layout_alignLeft="@id/ivPreview_bookmark"
+        app:paddingTopPercent="2.7027"
+        app:paddingBottomPercent="2.7027"
+        app:paddingLeftPercent="1.6779"
+        app:paddingRightPercent="1.6779"
+        app:layout_marginTopPercent="4.3243%"
+        android:focusable="true"
+        android:clickable="true"
+        android:nextFocusDown="@+id/ivPreview_info"
+        android:nextFocusUp="@+id/ivPreview_bookmark"
+        android:src="@drawable/icon_down"
+        android:background="@drawable/selector_preview_icon"/>
+
+    <com.inucreative.sednlauncher.CustomView.PercentImageView
+        android:id="@+id/ivPreview_info"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="10.7383%"
+        app:layout_heightPercent="17.29733%"
+        android:layout_below="@id/ivPreview_download"
+        android:layout_alignLeft="@id/ivPreview_download"
+        app:paddingTopPercent="2.7027"
+        app:paddingBottomPercent="2.7027"
+        app:paddingLeftPercent="1.6779"
+        app:paddingRightPercent="1.6779"
+        app:layout_marginTopPercent="4.3243%"
+        android:focusable="true"
+        android:clickable="true"
+        android:nextFocusUp="@+id/ivPreview_download"
+        android:src="@drawable/icon_info"
+        android:background="@drawable/selector_preview_icon"/>
+
+</android.support.percent.PercentRelativeLayout>

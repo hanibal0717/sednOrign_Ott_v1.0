@@ -1,0 +1,155 @@
+<resources>
+    <string name="app_name">SEDNLauncher</string>
+    <string name="celsius_mark">&#8451;</string>
+
+    <string name="str_stb_normal">Normal</string>
+    <string name="str_stb_warning">Warning</string>
+    <string name="str_stb_disconnected">Disconnect</string>
+
+    <string name="str_on">ON</string>
+    <string name="str_off">OFF</string>
+
+    <string name="str_target_all">본사전체</string>
+    <string name="str_target_more">외</string>
+
+    <string name="str_search">검색</string>
+    <string name="defaultSearch">검색어를 입력하세요.</string>
+    <string name="str_preview_day">DAY</string>
+    <string name="str_preview_hit">HIT</string>
+    <string name="str_preview_time">TIME</string>
+    <string name="str_info_resolution">해상도</string>
+    <string name="str_info_fileformat">파일포맷</string>
+    <string name="str_info_bitrate">비트레이트</string>
+    <string name="str_info_videocodec">비디오코덱</string>
+    <string name="str_info_audiocodec">오디오코덱</string>
+
+    <string name="str_setup_information">Information</string>
+    <string name="str_setup_network">Network</string>
+    <string name="str_setup_display">Display</string>
+    <string name="str_setup_system">System</string>
+    <string name="str_setup_info_sw_name">Software Name</string>
+    <string name="str_setup_info_service_url">Service URL</string>
+    <string name="str_setup_info_ip_address">IP Address</string>
+    <string name="str_setup_info_mac_address">MAC Address</string>
+    <string name="str_setup_info_fw_version">Firmware</string>
+
+    <string name="str_setup_save">저장</string>
+    <string name="str_setup_confirm">확인</string>
+    <string name="str_setup_cancel">취소</string>
+    <string name="str_setup_delete">삭제</string>
+    <string name="str_setup_exit_without_save">설정중인 항목이 저장되지 않았습니다. 현재 메뉴를 나가시겠습니까?</string>
+    <string name="str_setup_delete_file_dialog1">선택된 컨텐츠가 장비에서 삭제됩니다.</string>
+    <string name="str_setup_delete_file_dialog2">삭제하시겠습니까?</string>
+
+    <string name="str_setup_network_ethernet">유선</string>
+    <string name="str_setup_network_wifi">무선</string>
+    <string name="str_setup_display_resolution">해상도</string>
+    <string name="str_setup_display_cec">HDMI-CEC</string>
+    <string name="str_setup_system_server_url">서버URL</string>
+    <string name="str_setup_system_server_port">Port 번호</string>
+    <string name="str_setup_system_push_port">Push Port 번호</string>
+    <string name="str_setup_system_reboot">재부팅</string>
+    <string name="str_setup_system_fw_update">펌웨어 업데이트</string>
+    <string name="str_setup_system_storage_reset">저장소 및 초기화</string>
+
+    <string name="str_setup_network_not_connected">Network not connected.</string>
+    <string name="str_setup_network_ipaddress">- IP Address : </string>
+    <string name="str_setup_network_apname">- AP Name : </string>
+    <string name="str_setup_network_dhcp">자동할당</string>
+    <string name="str_setup_network_static">수동입력</string>
+    <string name="str_setup_network_info_ip">- IP주소</string>
+    <string name="str_setup_network_info_subnet">- Subnetmask</string>
+    <string name="str_setup_network_info_gateway">- Gateway</string>
+    <string name="str_setup_network_info_dns1">- DNS1</string>
+    <string name="str_setup_network_info_dns2">- DNS2</string>
+
+    <string name="str_setup_network_ethernet_connected">Ethernet connected.</string>
+    <string name="str_setup_network_wifi_connected">Wi-Fi connected.</string>
+    <string name="str_setup_network_connecting">Connecting...</string>
+    <string name="str_setup_network_enabling">Turning on Wi-Fi...</string>
+    <string name="str_setup_network_unknown">Unknown network.</string>
+    <string name="str_setup_network_wifi_usage">Wi-Fi 사용</string>
+    <string name="str_setup_network_wifi_pw_guide">에 대한 암호 입력</string>
+    <string name="str_setup_network_wifi_connect">연결</string>
+    <string name="str_setup_network_wifi_pw_show">패스워드 보이기</string>
+    <string name="msg_setup_saved">저장되었습니다.</string>
+    <string name="msg_setup_cancel">취소되었습니다.</string>
+    <string name="msg_already_connected_to_ethernet">이미 유선 네트워크에 연결되어 있습니다. 유선 해제후 연결하세요</string>
+    <string name="msg_password_too_short">암호 길이가 너무 짧습니다.</string>
+    <string name="msg_wifi_connection_failure">무선 네트워크에 연결할 수 없습니다.</string>
+    <string name="str_setup_system_server_url_tip">IP 또는 Domain을 입력하세요.</string>
+    <string name="str_setup_system_server_url_guide">※ 변경된 정보는 재부팅 이후 적용됩니다.</string>
+    <string name="str_setup_system_reboot1">[확인]버튼을 누르면 장비가 재부팅됩니다.</string>
+    <string name="str_setup_system_reboot2">재부팅 하시겠습니까?</string>
+
+    <string name="str_setup_firmware_version">현재 Firmware Version</string>
+    <string name="str_setup_firmware_check_result">펌웨어 확인 결과</string>
+    <string name="str_setup_no_new_firmware">※ 업데이트 가능한 파일이 없습니다.</string>
+    <string name="str_setup_new_firmware_available1">※ 새로운 업데이트 파일이 있습니다. [확인]버튼을 누르면 펌웨어가</string>
+    <string name="str_setup_new_firmware_available2">업데이트됩니다.</string>
+    <string name="str_setup_new_firmware_available3">업데이트 하시겠습니까?</string>
+
+    <string name="str_setup_storage_storage">저장소</string>
+    <string name="str_setup_storage_total">총 공간 :</string>
+    <string name="str_setup_storage_used">사용량 :</string>
+    <string name="str_setup_storage_retention">파일 보관기간</string>
+    <string name="str_setup_storage_retention_3months">3개월</string>
+    <string name="str_setup_storage_retention_6months">6개월</string>
+    <string name="str_setup_storage_retention_none">사용안함</string>
+    <string name="str_setup_storage_retention_guide">※ 디스크가 가득 찬 경우 설정에 관계없이 오래된 파일부터 삭제됩니다.</string>
+    <string name="str_setup_storage_reset">초기화</string>
+    <string name="str_setup_storage_reset_button">초기화 하기</string>
+    <string name="str_setup_storage_reset_guide">※ 장비를 최초 상태로 초기화합니다.</string>
+    <string name="str_setup_storage_reset_dialog1">장비가 최초 상태로 초기화됩니다.</string>
+    <string name="str_setup_storage_reset_dialog2">다운로드 파일, 설정 등의 모든 정보들이 삭제됩니다.</string>
+    <string name="str_setup_storage_reset_dialog3">장비를 초기화시키겠습니까?</string>
+    <string name="msg_storage_reset">장비가 초기화되었습니다.</string>
+
+    <string name="str_setup_resolution_info1">Display Size</string>
+    <string name="str_setup_resolution_info2"><![CDATA[SD: <font color="#909090">480</font>, HD: <font color="#909090">720</font>, FHD: <font color="#909090">1080</font>, UHD: <font color="#909090">4K</font>]]></string>
+    <string name="str_setup_cec_info1">HDMI-CEC를 지원하는 TV에서 사용 가능합니다.</string>
+    <string name="str_setup_cec_info2">CEC를 사용하면 TV의 전원을 자동으로 제어할 수 있습니다.</string>
+
+
+    <string name="str_new_device">신규 장비</string>
+    <string name="msg_new_device_registered">신규 장비로 등록되었습니다.</string>
+    <string name="msg_reboot_alert">잠시 후 관리자에 의해 장비가 재부팅됩니다.</string>
+    <string name="msg_firmware_update_alert">잠시 후 새로운 펌웨어로 업데이트 되며 장비가 재부팅됩니다.</string>
+    <string name="msg_firmware_no_update">최신 펌웨어를 사용하고 있습니다.</string>
+    <string name="msg_schedule_updated">새로운 방송 스케줄이 다운로드되었습니다.</string>
+    <string name="msg_no_server_url">Setup에서 Service URL을 설정해 주세요.</string>
+    <string name="msg_download_start">다운로드가 시작되었습니다.</string>
+    <string name="msg_download_end">다운로드가 완료되었습니다.</string>
+    <string name="msg_download_failed">다운로드에 실패하였습니다.</string>
+    <string name="msg_already_downloaded">이미 다운로드된 영상입니다.</string>
+    <string name="msg_already_downloading">다운로드 중인 영상입니다.</string>
+    <string name="msg_file_removed">파일이 삭제되었습니다.</string>
+    <string name="msg_no_search_result">검색 결과가 없습니다.</string>
+    <string name="msg_no_search_word">검색어를 입력해 주세요.</string>
+    <string name="msg_not_on_air">현재는 방송중이 아닙니다.</string>
+    <string name="msg_cannot_play_video">영상을 재생할 수 없습니다.</string>
+    <string name="msg_bookmark_added">북마크 되었습니다.</string>
+    <string name="msg_bookmark_removed">북마크 제거되었습니다.</string>
+
+    <string name="str_player_key_not_supported">이 화면에서는 지원하지 않는 기능입니다.</string>
+    <string name="str_player_schedule_cannot_exit">스케줄 방송중에는 종료할 수 없습니다.</string>
+    <string name="str_player_ready">방송이 곧 시작됩니다.</string>
+    <string name="str_player_speed_text">배속</string>
+    <string name="str_player_schedule_end_tvoff">스케쥴 방송이 종료되어 TV전원을 끕니다.</string>
+
+    <string name="str_home_box_today_schedule">오늘의 방송일정</string>
+    <string name="str_home_box_search">검색어를 입력하세요</string>
+    <string name="str_home_box_recent_vod">최근등록 VOD</string>
+    <string name="str_home_box_most_vod">가장 많이 시청한 VOD</string>
+
+    <string name="str_no_today_schedule">등록된 방송이 없습니다</string>
+
+    <string name="str_channel_not_available">사용하지 않는 채널</string>
+
+    <string name="msg_batch_down_start">스케줄된 영상의 다운로드를 시작합니다.</string>
+    <string name="msg_batch_down_complete">스케줄된 모든 영상이 다운로드 되었습니다.</string>
+    <string name="toast_cec">연결된 TV는 HDMI-CEC를 지원하지 않습니다</string>
+    <string name="toast_tv_off">잠시 후 관리자에 의해 TV 전원이 OFF 됩니다.\n(HDMI-CEC를 지원하는 TV에만 해당)</string>
+    <string name="toast_vod_update">VOD 목록이 업데이트 되었습니다.</string>
+    <string name="toast_config_update">환경설정이 업데이트 되었습니다.</string>
+</resources>

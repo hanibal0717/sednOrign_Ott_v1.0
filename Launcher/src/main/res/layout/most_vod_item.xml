@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="490px"
+    android:layout_height="62px"
+    android:background="@drawable/selector_most_vod_item"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/ivVODRank"
+        android:layout_width="30px"
+        android:layout_height="20px"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="16px"
+        android:src="@drawable/mostvod_crown" />
+
+    <TextView
+        android:id="@+id/tvVODName"
+        android:layout_width="320px"
+        android:layout_height="20px"
+        android:layout_marginLeft="10px"
+        android:layout_marginTop="16px"
+        android:includeFontPadding="false"
+        android:text="Sample vod"
+        android:textColor="@color/white"
+        android:textSize="18px" />
+
+    <ImageView
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_marginTop="16px"
+        android:src="@drawable/mostvod_star" />
+
+    <TextView
+        android:id="@+id/tvVODHit"
+        android:layout_width="100px"
+        android:layout_height="20px"
+        android:layout_marginLeft="10px"
+        android:layout_marginTop="16px"
+        android:includeFontPadding="false"
+        android:text="1,234"
+        android:textColor="@color/white"
+        android:textSize="18px" />
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="570px"
+    android:layout_height="250px"
+    android:background="@drawable/border_black">
+
+    <TextView
+        android:id="@+id/tvDeleteConfirmDialog1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40px"
+        android:textColor="@color/white"
+        android:textSize="20px"
+        android:textStyle="bold"
+        android:text="@string/str_setup_delete_file_dialog1"/>
+    <TextView
+        android:id="@+id/tvDeleteConfirmDialog2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tvDeleteConfirmDialog1"
+        android:layout_marginTop="5px"
+        android:textColor="@color/white"
+        android:textSize="20px"
+        android:textStyle="bold"
+        android:text="@string/str_setup_delete_file_dialog2"/>
+
+    <TextView
+        android:id="@+id/tvDeleteConfirm"
+        android:layout_width="140px"
+        android:layout_height="35px"
+        android:layout_marginTop="140px"
+        android:layout_marginLeft="115px"
+        android:focusable="true"
+        android:clickable="true"
+        android:nextFocusRight="@+id/tvDeleteCancel"
+        android:gravity="center"
+        android:background="@drawable/selector_setup_button_save"
+        android:textColor="@color/white"
+        android:textSize="18px"
+        android:text="@string/str_setup_delete"/>
+    <TextView
+        android:id="@+id/tvDeleteCancel"
+        android:layout_width="140px"
+        android:layout_height="35px"
+        android:layout_marginTop="140px"
+        android:layout_marginLeft="265px"
+        android:focusable="true"
+        android:clickable="true"
+        android:nextFocusLeft="@+id/tvDeleteConfirm"
+        android:gravity="center"
+        android:background="@drawable/selector_setup_button_cancel"
+        android:textColor="@color/white"
+        android:textSize="18px"
+        android:text="@string/str_setup_cancel"/>
+
+    <View
+        android:layout_width="10px"
+        android:layout_height="20px"
+        android:layout_marginTop="185px"/>
+</RelativeLayout>

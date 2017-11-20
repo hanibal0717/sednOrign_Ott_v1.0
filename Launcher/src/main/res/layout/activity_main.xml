@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <!-- 배경 동영상 및 동영상 dimming -->
+    <com.inucreative.sednlauncher.CustomView.BGVideoView
+        android:id="@+id/vvBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="gone"/>
+    <ImageView
+        android:id="@+id/ivVideoBGDimming"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/quickMenuBGColor"
+        android:visibility="gone"/>
+
+    <!-- 배경 이미지 -->
+    <ImageView
+        android:id="@+id/ivImageBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:focusable="false"
+        android:src="@drawable/bg"
+        android:scaleType="fitXY"
+        android:visibility="visible"/>
+
+    <!-- 전체 화면 UI 구성 1920 x 1080 -->
+    <android.support.percent.PercentFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Client 로고 400 x 80-->
+        <ImageView
+            android:id="@+id/ivClientLogo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitStart"
+            app:layout_widthPercent="20.8333%"
+            app:layout_heightPercent="7.4074%"
+            app:layout_marginLeftPercent="4%"
+            app:layout_marginTopPercent="5%"
+            android:src="@drawable/logo"/>
+        <com.inucreative.sednlauncher.CustomView.ASTextView
+            android:id="@+id/tvClientLogo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="20.8333%"
+            app:layout_heightPercent="7.4074%"
+            app:layout_marginLeftPercent="4%"
+            app:layout_marginTopPercent="5%"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:maxLines="1"
+            app:textSizePercent="37"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+
+        <!-- 장비 상태 -->
+        <include
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="10.8750%"
+            app:layout_heightPercent="4.9074%"
+            app:layout_marginLeftPercent="42.2813%"
+            app:layout_marginTopPercent="6.3889%"
+            layout="@layout/section_stb_status" />
+
+        <!-- 소속그룹 및 장비명 -->
+        <include
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="9.3750%"
+            app:layout_heightPercent="4.9074%"
+            app:layout_marginLeftPercent="57.2813%"
+            app:layout_marginTopPercent="6.3889%"
+            layout="@layout/section_group_device_main" />
+
+        <!-- 날짜시간 및 날씨 -->
+        <include
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="12.6563%"
+            app:layout_heightPercent="8.1481%"
+            app:layout_marginLeftPercent="68.5833%"
+            app:layout_marginTopPercent="5.0000%"
+            layout="@layout/section_time_weather_main" />
+
+        <!-- 우측 메뉴 -->
+        <include
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="17.8646%"
+            app:layout_heightPercent="100%"
+            app:layout_marginLeftPercent="82.1354%"
+            app:layout_marginTopPercent="0%"
+            layout="@layout/section_menu_main" />
+
+        <!-- 메인 디스플레이 영역 1695 x 870 (37, 175) -->
+        <android.support.percent.PercentFrameLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="88.2813%"
+            app:layout_heightPercent="80.5556%"
+            app:layout_marginLeftPercent="1.9271%"
+            app:layout_marginTopPercent="16.2037%">
+
+            <ViewFlipper
+                android:id="@+id/vfScreenFlipper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inAnimation="@anim/menu_slide_in"
+                android:outAnimation="@anim/menu_slide_out">
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    layout="@layout/tab_home"/>
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    layout="@layout/tab_vod"/>
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    layout="@layout/tab_live"/>
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    layout="@layout/tab_mypage"/>
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    layout="@layout/tab_search"/>
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    layout="@layout/tab_setup"/>
+
+            </ViewFlipper>
+        </android.support.percent.PercentFrameLayout>
+    </android.support.percent.PercentFrameLayout>
+</FrameLayout>

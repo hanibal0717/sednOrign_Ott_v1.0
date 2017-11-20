@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                               xmlns:app="http://schemas.android.com/apk/res-auto"
+                                               xmlns:tools="http://schemas.android.com/tools"
+                                               android:layout_width="match_parent"
+                                               android:layout_height="match_parent"
+                                               android:background="#000000"
+                                               tools:context="com.inucreative.sednlauncher.Activity.PlayerActivity">
+
+    <FrameLayout
+        android:id="@+id/videoSurfaceContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_heightPercent="80%"
+        app:layout_widthPercent="80%">
+
+        <SurfaceView
+            android:id="@+id/videoSurface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/layoutWeather"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/shape_round_rect"
+        app:layout_heightPercent="80%"
+        app:layout_marginTopPercent="0%"
+        app:layout_widthPercent="20%">
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_below="@+id/layoutWeatherSub"
+            android:layout_centerInParent="true"
+            app:layout_heightPercent="80%"
+            app:layout_widthPercent="95%">
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <!-- 날짜시간 및 날씨 -->
+        <include
+            app:layout_widthPercent="100%"
+            app:layout_heightPercent="10%"
+            app:layout_marginLeftPercent="5%"
+            app:layout_marginTopPercent="5.0000%"
+            layout="@layout/section_time_weather_type1" />
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/layoutWeatherSub"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            app:layout_heightPercent="10%"
+            android:visibility="gone"
+            app:layout_marginTopPercent="5%"
+            app:layout_widthPercent="100%">
+
+            <ImageView
+                android:id="@+id/ivBGWeather1"
+                android:scaleType="centerInside"
+                android:src="@drawable/weather_01"
+                app:layout_heightPercent="60%"
+                app:layout_widthPercent="50%"/>
+
+            <TextView
+                android:id="@+id/tvTemperature1"
+                android:layout_below="@+id/ivBGWeather"
+                android:gravity="center"
+                android:text=""
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                app:layout_heightPercent="40%"
+                app:layout_widthPercent="50%"
+                />
+
+        </android.support.percent.PercentRelativeLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="100%">
+
+        <HorizontalScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            app:layout_marginBottomPercent="20%"
+            app:layout_marginTopPercent="20%">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/viewBefore"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+                <com.inucreative.sednlauncher.CustomView.ASTextView
+                    android:id="@+id/tvNews"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="#ffffff"/>
+
+                <View
+                    android:id="@+id/viewAfter"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

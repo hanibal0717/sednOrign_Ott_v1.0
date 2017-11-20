@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/selector_transparent"
+    android:focusable="true"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/tvAPName"
+        android:layout_width="wrap_content"
+        android:layout_height="30px"
+        android:layout_marginLeft="10px"
+        android:layout_marginTop="5px"
+        android:duplicateParentState="true"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:text="SEDN_5G"
+        android:textColor="@color/white"
+        android:textSize="22px" />
+
+    <ImageView
+        android:id="@+id/ivSignalStrength"
+        android:layout_width="30px"
+        android:layout_height="24px"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10px"
+        android:layout_marginTop="8px"
+        android:duplicateParentState="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_wireless_wifi_01" />
+
+    <ImageView
+        android:id="@+id/ivSecureAP"
+        android:layout_width="30px"
+        android:layout_height="24px"
+        android:layout_alignTop="@+id/ivSignalStrength"
+        android:layout_marginRight="10px"
+        android:layout_toLeftOf="@+id/ivSignalStrength"
+        android:duplicateParentState="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_wireless_lock" />
+</RelativeLayout>

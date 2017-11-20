@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="thumbnailBGColor">#65000000</color>
+    <color name="quickMenuBGColor">#90000000</color>
+    <color name="contentBGColor">#99000000</color>
+    <color name="homeBoxBGColor">#CC000000</color>
+    <color name="liveBGColor">#CC000000</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="player_semi_trans">#66ffffff</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="thin_white">#E0E0E0</color>
+    <color name="black">#000000</color>
+    <color name="lightgray">#909090</color>
+    <color name="lightgray2">#6E6E6E</color>
+    <color name="gray">#434343</color>
+    <color name="darkgray">#191919</color>
+    <color name="yellow">#FFB401</color>
+    <color name="red">#df4437</color>
+
+    <color name="depth1selected">#df4437</color>
+    <color name="depth2selected">#35a153</color>
+    <color name="depth3selected">#4f7abd</color>
+
+    <color name="searchText">#555353</color>
+    <color name="searchButton">#6d6d6d</color>
+
+    <color name="previewTileBG">#303030</color>
+
+    <color name="setupSubTextBG">#515151</color>
+
+    <color name="bookmarkTabBG">#30924b</color>
+    <color name="downloadTabBG">#4f7abd</color>
+
+    <color name="setupBG">#E6323232</color>
+    <color name="setupLeftBG">#39FFFFFF</color>
+
+
+</resources>

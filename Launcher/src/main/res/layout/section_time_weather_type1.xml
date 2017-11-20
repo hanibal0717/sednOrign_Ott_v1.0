@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ff0000"
+    android:layout_width="0dp"
+    android:layout_height="0dp">
+
+    <TextClock
+        android:id="@+id/tcClock"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+    </TextClock>
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvBGDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="2000.01.01"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_heightPercent="34%"
+        app:layout_widthPercent="61.7284%"/>
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvBGTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignLeft="@id/tvBGDate"
+        android:layout_below="@id/tvBGDate"
+        android:text="00:00"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_heightPercent="66%"
+        app:layout_widthPercent="61.7284%"/>
+
+    <ImageView
+        android:id="@+id/ivTWDivider"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_toRightOf="@id/tvBGDate"
+        android:scaleType="fitCenter"
+        android:src="@drawable/time_line"
+        app:layout_heightPercent="86%"
+        app:layout_marginTopPercent="7%"
+        app:layout_widthPercent="0.8231%"/>
+
+    <ImageView
+        android:id="@+id/ivBGWeather"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/ivTWDivider"
+        android:scaleType="fitStart"
+        android:src="@drawable/weather_01"
+        app:layout_heightPercent="60.2273%"
+        app:layout_marginLeftPercent="8.2305%"
+        app:layout_widthPercent="20.9877%"/>
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvBGTemperature"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignLeft="@id/ivBGWeather"
+        android:layout_below="@id/ivBGWeather"
+        android:gravity="center_horizontal"
+        android:text="@string/celsius_mark"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_heightPercent="23.8636%"
+        app:layout_marginTopPercent="10.17727%"
+        app:layout_widthPercent="20.9877%"/>
+</android.support.percent.PercentRelativeLayout>

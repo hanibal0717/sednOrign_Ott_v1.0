@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutVOD">
+    <!-- 전체 1695 x 870 -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/quickMenuBGColor"/>
+
+    <!-- 1depth 271 x 660=(60x9+15*8) -->
+    <!-- 화살표 45 x 30 -->
+
+    <ListView
+        android:id="@+id/lv1stCategory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="15.9882%"
+        app:layout_heightPercent="75.8621%"
+        app:layout_marginTopPercent="6.8966%"
+        app:layout_marginLeftPercent="3.5398%"
+        android:divider="@android:color/transparent"
+        android:choiceMode="singleChoice"/>
+    <ImageView
+        android:id="@+id/iv1stUpArrow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="13.6981%"
+        app:layout_heightPercent="3.4483%"
+        android:layout_below="@id/lv1stCategory"
+        android:layout_alignRight="@id/lv1stCategory"
+        app:layout_marginTopPercent="6.8966%"
+        android:visibility="invisible"
+        android:src="@drawable/btn_up"/>
+    <ImageView
+        android:id="@+id/iv1stDownArrow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="13.6981%"
+        app:layout_heightPercent="3.4483%"
+        android:layout_below="@id/lv1stCategory"
+        android:layout_alignLeft="@id/lv1stCategory"
+        app:layout_marginTopPercent="6.8966%"
+        android:visibility="invisible"
+        android:src="@drawable/btn_next"/>
+
+    <!-- 2depth 271 x 660 (60x9+15*8) -->
+    <ListView
+        android:id="@+id/lv2ndCategory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="15.9882%"
+        app:layout_heightPercent="75.8621%"
+        android:layout_alignTop="@id/lv1stCategory"
+        app:layout_marginLeftPercent="20.3540%"
+        android:divider="@android:color/transparent"
+        android:choiceMode="singleChoice"/>
+    <ImageView
+        android:id="@+id/iv2ndUpArrow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="13.6981%"
+        app:layout_heightPercent="3.4483%"
+        android:layout_below="@id/lv2ndCategory"
+        android:layout_alignRight="@id/lv2ndCategory"
+        app:layout_marginTopPercent="6.8966%"
+        android:visibility="invisible"
+        android:src="@drawable/btn_up"/>
+    <ImageView
+        android:id="@+id/iv2ndDownArrow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="13.6981%"
+        app:layout_heightPercent="3.4483%"
+        android:layout_below="@id/lv2ndCategory"
+        android:layout_alignLeft="@id/lv2ndCategory"
+        app:layout_marginTopPercent="6.8966%"
+        android:visibility="invisible"
+        android:src="@drawable/btn_next"/>
+
+    <!-- 3depth 1006 x 660 (60x9+15*8) -->
+    <ListView
+        android:id="@+id/lvVODItems"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="59.3510%"
+        app:layout_heightPercent="75.8621%"
+        android:layout_alignTop="@id/lv2ndCategory"
+        app:layout_marginLeftPercent="37.1682%"
+        android:divider="@android:color/transparent"
+        android:choiceMode="singleChoice"/>
+    <ImageView
+        android:id="@+id/ivItemsUpArrow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="57.0609%"
+        app:layout_heightPercent="3.4483%"
+        android:layout_below="@id/lvVODItems"
+        android:layout_alignRight="@id/lvVODItems"
+        app:layout_marginTopPercent="6.8966%"
+        android:visibility="invisible"
+        android:src="@drawable/btn_up"/>
+    <ImageView
+        android:id="@+id/ivItemsDownArrow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="57.0609%"
+        app:layout_heightPercent="3.4483%"
+        android:layout_below="@id/lvVODItems"
+        android:layout_alignLeft="@id/lvVODItems"
+        app:layout_marginTopPercent="6.8966%"
+        android:visibility="invisible"
+        android:src="@drawable/btn_next"/>
+
+    <!-- 컨텐츠 미리보기 596 x 424-->
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/vod_content_preview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="35.1622%"
+        app:layout_heightPercent="42.5287%"
+        app:layout_marginLeftPercent="45.8%"
+        android:visibility="invisible">
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/content_preview"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <!-- 컨텐츠 정보 상세보기 296 x 269-->
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/vod_content_info"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="17.4631%"
+        app:layout_heightPercent="30.9195%"
+        app:layout_marginLeftPercent="79.5%"
+        android:visibility="invisible">
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/content_info"/>
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

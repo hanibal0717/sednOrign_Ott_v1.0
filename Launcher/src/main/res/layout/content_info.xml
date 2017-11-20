@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 이 module에 대한 include 구문을 PercentRelativeLayout으로 감싸서 크기를 296x269 맞춰야 함 -->
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+    <!-- 전체 296 x 269 -->
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvInfoResolutionTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="44.2568%"
+        app:layout_heightPercent="11.8959%"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        app:layout_marginTopPercent="10.1351%"
+        app:layout_marginLeftPercent="11.1524%"
+        android:gravity="center"
+        android:background="@color/previewTileBG"
+        app:textSizePercent="63"
+        android:textStyle="bold"
+        android:text="@string/str_info_resolution"
+        android:textColor="@color/white"/>
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvInfoResolutionText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="35.4730%"
+        app:layout_heightPercent="11.8959%"
+        android:layout_toRightOf="@id/tvInfoResolutionTitle"
+        android:layout_alignTop="@id/tvInfoResolutionTitle"
+        app:layout_marginLeftPercent="5.0676%"
+        android:gravity="left|center_vertical"
+        app:textSizePercent="63"
+        android:text=""
+        android:textColor="@color/white"/>
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvInfoFileformatTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="44.2568%"
+        app:layout_heightPercent="11.8959%"
+        android:layout_below="@id/tvInfoResolutionTitle"
+        android:layout_alignLeft="@id/tvInfoResolutionTitle"
+        app:layout_marginTopPercent="3.3784%"
+        android:gravity="center"
+        android:background="@color/previewTileBG"
+        app:textSizePercent="63"
+        android:textStyle="bold"
+        android:text="@string/str_info_fileformat"
+        android:textColor="@color/white"/>
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvInfoFileformatText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="35.4730%"
+        app:layout_heightPercent="11.8959%"
+        android:layout_toRightOf="@id/tvInfoFileformatTitle"
+        android:layout_alignTop="@id/tvInfoFileformatTitle"
+        app:layout_marginLeftPercent="5.0676%"
+        android:gravity="left|center_vertical"
+        app:textSizePercent="63"
+        android:text=""
+        android:textColor="@color/white"/>
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvInfoBitrateTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="44.2568%"
+        app:layout_heightPercent="11.8959%"
+        android:layout_below="@id/tvInfoFileformatTitle"
+        android:layout_alignLeft="@id/tvInfoFileformatTitle"
+        app:layout_marginTopPercent="3.3784%"
+        android:gravity="center"
+        android:background="@color/previewTileBG"
+        app:textSizePercent="63"
+        android:textStyle="bold"
+        android:text="@string/str_info_bitrate"
+        android:textColor="@color/white"/>
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvInfoBitrateText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="35.4730%"
+        app:layout_heightPercent="11.8959%"
+        android:layout_toRightOf="@id/tvInfoBitrateTitle"
+        android:layout_alignTop="@id/tvInfoBitrateTitle"
+        app:layout_marginLeftPercent="5.0676%"
+        android:gravity="left|center_vertical"
+        app:textSizePercent="63"
+        android:text=""
+        android:textColor="@color/white"/>
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvInfoVideocodecTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="44.2568%"
+        app:layout_heightPercent="11.8959%"
+        android:layout_below="@id/tvInfoBitrateTitle"
+        android:layout_alignLeft="@id/tvInfoBitrateTitle"
+        app:layout_marginTopPercent="3.3784%"
+        android:gravity="center"
+        android:background="@color/previewTileBG"
+        app:textSizePercent="63"
+        android:textStyle="bold"
+        android:text="@string/str_info_videocodec"
+        android:textColor="@color/white"/>
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvInfoVideocodecText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="35.4730%"
+        app:layout_heightPercent="11.8959%"
+        android:layout_toRightOf="@id/tvInfoVideocodecTitle"
+        android:layout_alignTop="@id/tvInfoVideocodecTitle"
+        app:layout_marginLeftPercent="5.0676%"
+        android:gravity="left|center_vertical"
+        app:textSizePercent="63"
+        android:text=""
+        android:textColor="@color/white"/>
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvInfoAudiocodecTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="44.2568%"
+        app:layout_heightPercent="11.8959%"
+        android:layout_below="@id/tvInfoVideocodecTitle"
+        android:layout_alignLeft="@id/tvInfoVideocodecTitle"
+        app:layout_marginTopPercent="3.3784%"
+        android:gravity="center"
+        android:background="@color/previewTileBG"
+        app:textSizePercent="63"
+        android:textStyle="bold"
+        android:text="@string/str_info_audiocodec"
+        android:textColor="@color/white"/>
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvInfoAudiocodecText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="35.4730%"
+        app:layout_heightPercent="11.8959%"
+        android:layout_toRightOf="@id/tvInfoAudiocodecTitle"
+        android:layout_alignTop="@id/tvInfoAudiocodecTitle"
+        app:layout_marginLeftPercent="5.0676%"
+        android:gravity="left|center_vertical"
+        app:textSizePercent="63"
+        android:text=""
+        android:textColor="@color/white"/>
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                               xmlns:app="http://schemas.android.com/apk/res-auto"
+                                               android:id="@+id/layoutLive"
+                                               android:layout_width="match_parent"
+                                               android:layout_height="match_parent">
+    <!-- 전체 1695 x 870 -->
+
+    <!-- EPG 뷰 1695 x 540-->
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="62.069%"
+        app:layout_widthPercent="100%">
+
+        <!-- 요일, 날짜 -->
+        <TextView
+            android:id="@+id/tvLiveTodayStr"
+            android:layout_width="300px"
+            android:layout_height="30px"
+            android:layout_marginLeft="78px"
+            android:layout_marginRight="5px"
+            android:layout_marginTop="46px"
+            android:text="Mon, 9/10"
+            android:textColor="@color/white"
+            android:textSize="24px"/>
+
+        <!-- 화살표 + 채널 목록 -->
+        <LinearLayout
+            android:layout_width="1695px"
+            android:layout_height="460px"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="54px"
+                android:layout_height="55px"
+                android:layout_marginRight="24px"
+                android:src="@drawable/arrow_left"/>
+
+            <ScrollView
+                android:id="@+id/svLiveChannel"
+                android:layout_width="300px"
+                android:layout_height="460px"
+                android:layout_marginRight="5px"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/layoutLiveChannel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"/>
+            </ScrollView>
+
+            <ImageView
+                android:layout_width="54px"
+                android:layout_height="55px"
+                android:layout_marginLeft="1258px"
+                android:src="@drawable/arrow_right"/>
+        </LinearLayout>
+
+        <!-- Timeline + 방송 리스트 -->
+        <HorizontalScrollView
+            android:id="@+id/hsvLiveBroadcast"
+            android:layout_width="1234px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="383px"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/layoutTimeLine"
+                    android:layout_width="7404px"
+                    android:layout_height="30px"
+                    android:layout_marginTop="46px"/>
+
+                <ScrollView
+                    android:id="@+id/svLiveBroadcast"
+                    android:layout_width="match_parent"
+                    android:layout_height="460px"
+                    android:layout_alignParentBottom="true"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/layoutLiveBroadcast"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"/>
+                </ScrollView>
+
+                <ImageView
+                    android:id="@+id/ivCurTimeBar"
+                    android:layout_width="20px"
+                    android:layout_height="460px"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/nowtime_bar"/>
+            </RelativeLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+    <!-- 하단 라이브 리스트 1695 x 290-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_heightPercent="33.3333%"
+        app:layout_widthPercent="100%"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="54px"
+            android:layout_height="55px"
+            android:layout_marginRight="24px"
+            android:src="@drawable/arrow_left"/>
+
+        <HorizontalScrollView
+            android:id="@+id/svLiveBottomList"
+            android:layout_width="1539px"
+            android:layout_height="289px"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/layoutLiveBottomList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"/>
+        </HorizontalScrollView>
+
+        <ImageView
+            android:layout_width="54px"
+            android:layout_height="55px"
+            android:layout_marginLeft="24px"
+            android:src="@drawable/arrow_right"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="100%"
+        app:layout_widthPercent="100%">
+
+        <include
+            layout="@layout/schedule_preview"
+            android:layout_width="720px"
+            android:layout_height="382px"/>
+    </RelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ASTextView">
+        <attr name="textSizePercent" format="float" />
+        <attr name="adjustTopForAscent" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ASEditText">
+        <attr name="defaultText" format="string" />
+    </declare-styleable>
+    <declare-styleable name="PercentPaddingView">
+        <attr name="paddingTopPercent" format="float" />
+        <attr name="paddingBottomPercent" format="float" />
+        <attr name="paddingLeftPercent" format="float" />
+        <attr name="paddingRightPercent" format="float" />
+    </declare-styleable>
+</resources>

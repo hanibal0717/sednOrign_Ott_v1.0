@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutSearch">
+    <!-- 전체 1695 x 870 -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/quickMenuBGColor"/>
+
+    <!-- SEARCH 문구 150x45 -->
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="9.4395%"
+        app:layout_heightPercent="5.1724%"
+        app:layout_marginLeftPercent="3.5398%"
+        app:layout_marginTopPercent="6.8966%"
+        android:gravity="left|center_vertical"
+        android:text="SEARCH"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:textSizePercent="95"/>
+
+    <!-- 입력창 (818+117) x 68 , (381, 60) -->
+    <com.inucreative.sednlauncher.CustomView.ASEditText
+        android:id="@+id/etSearchText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="48.2596%"
+        app:layout_heightPercent="7.8161%"
+        app:layout_marginLeftPercent="22.4779%"
+        app:layout_marginTopPercent="6.8966%"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="text"
+        android:gravity="center_vertical|left"
+        android:background="@drawable/selector_search_searchbox"
+        android:textColor="@color/searchText"
+        android:focusable="true"
+        app:paddingLeftPercent="4"
+        app:defaultText="@string/defaultSearch"
+        app:textSizePercent="36.66" /> <!-- 36.66 = 22 / 60 -->
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvGoSearch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="6.9027%"
+        app:layout_heightPercent="7.8161%"
+        android:layout_toRightOf="@id/etSearchText"
+        android:layout_alignTop="@id/etSearchText"
+        android:gravity="center"
+        android:text="@string/str_search"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@drawable/selector_search_searchbutton"
+        app:textSizePercent="41.66"/> <!-- 41.66 = 25 / 60 -->
+
+    <!-- 935 x 510=(60x7+15*6) , (below 60, 45)-->
+    <!-- 화살표 45 x 30 -->
+    <ListView
+        android:id="@+id/lvSearchResult"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="55.1622%"
+        app:layout_heightPercent="58.6207%"
+        android:layout_below="@id/etSearchText"
+        app:layout_marginTopPercent="6.8966%"
+        app:layout_marginLeftPercent="3.5398%"
+        android:divider="@android:color/transparent"
+        android:choiceMode="singleChoice"
+        />
+    <ImageView
+        android:id="@+id/ivSearchUpArrow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="52.5074%"
+        app:layout_heightPercent="3.4483%"
+        android:layout_below="@id/lvSearchResult"
+        android:layout_alignRight="@id/lvSearchResult"
+        app:layout_marginTopPercent="9.5402%"
+        android:visibility="invisible"
+        android:src="@drawable/btn_up"/>
+    <ImageView
+        android:id="@+id/ivSearchDownArrow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="52.5074%"
+        app:layout_heightPercent="3.4483%"
+        android:layout_below="@id/lvSearchResult"
+        android:layout_alignLeft="@id/lvSearchResult"
+        app:layout_marginTopPercent="9.5402%"
+        android:visibility="invisible"
+        android:src="@drawable/btn_next"/>
+
+    <!-- 컨텐츠 미리보기 596 x 424 (toRightof, alignTop 30, 54)-->
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/search_content_preview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="35.1622%"
+        app:layout_heightPercent="42.5287%"
+        android:layout_toRightOf="@id/lvSearchResult"
+        android:layout_alignTop="@id/lvSearchResult"
+        app:layout_marginLeftPercent="2.6549%"
+        android:visibility="invisible">
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/content_preview"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <!-- 컨텐츠 정보 상세보기 296 x 269-->
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/search_content_info"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="17.4631%"
+        app:layout_heightPercent="30.9195%"
+        app:layout_marginLeftPercent="78.8%"
+        app:layout_marginTopPercent="62.3931%"
+        android:visibility="invisible">
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/content_info"/>
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

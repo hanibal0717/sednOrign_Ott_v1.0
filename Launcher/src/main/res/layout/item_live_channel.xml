@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300px"
+    android:layout_height="150px"
+    android:layout_marginBottom="5px"
+    android:background="@drawable/selector_live_item"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvLiveChannelNum"
+        android:layout_width="240px"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2px"
+        android:text="ChannelNum"
+        android:textColor="@color/white"
+        android:textSize="24px"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvLiveChannelName"
+        android:layout_width="240px"
+        android:layout_height="wrap_content"
+        android:text="ChannelName"
+        android:textColor="@color/white"
+        android:textSize="20px"
+        android:textStyle="bold"/>
+</LinearLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutQuickmenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 343 x 1080 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/quickMenuBGColor" />
+
+    <!-- 62 x 84 -->
+    <ImageView
+        android:id="@+id/ivMenuHome"
+        style="@style/MainMenuImage"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/selector_main_home"
+        android:focusable="true"
+        app:layout_heightPercent="7.7778%"
+        app:layout_marginLeftPercent="12.9738%"
+        app:layout_marginTopPercent="10.0000%"
+        app:layout_widthPercent="18.0758%" />
+    <!-- 54 x 85 -->
+    <ImageView
+        android:id="@+id/ivMenuVOD"
+        style="@style/MainMenuImage"
+        android:layout_below="@id/ivMenuHome"
+        android:background="@drawable/selector_main_vod"
+        android:focusable="true"
+        app:layout_heightPercent="7.8704%"
+        app:layout_marginLeftPercent="14.1399%"
+        app:layout_marginTopPercent="6.4815%"
+        app:layout_widthPercent="15.7434%" />
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvMenuInfoVOD"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/ivMenuVOD"
+        android:textColor="#66FFFFFF"
+        app:layout_heightPercent="2%"
+        app:layout_marginLeftPercent="47%"
+        app:layout_marginTopPercent="2.2%"
+        app:layout_widthPercent="40%" />
+    <!-- 54 x 90 -->
+    <ImageView
+        android:id="@+id/ivMenuLive"
+        style="@style/MainMenuImage"
+        android:layout_below="@id/ivMenuVOD"
+        android:background="@drawable/selector_main_live"
+        android:focusable="true"
+        app:layout_heightPercent="8.3333%"
+        app:layout_marginLeftPercent="14.1399%"
+        app:layout_marginTopPercent="6.4815%"
+        app:layout_widthPercent="15.7434%" />
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvMenuInfoChannel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/ivMenuLive"
+        android:textColor="#66FFFFFF"
+        app:layout_heightPercent="2%"
+        app:layout_marginLeftPercent="47%"
+        app:layout_marginTopPercent="2.6%"
+        app:layout_widthPercent="40%" />
+    <!-- 60 x 109 --><!-- 92 x 76 -->
+    <ImageView
+        android:id="@+id/ivMenuMypage"
+        style="@style/MainMenuImage"
+        android:layout_below="@id/ivMenuLive"
+        android:background="@drawable/selector_main_mypage"
+        android:focusable="true"
+        app:layout_heightPercent="7.0370%"
+        app:layout_marginLeftPercent="8.6006%"
+        app:layout_marginTopPercent="6.4815%"
+        app:layout_widthPercent="26.8222%" />
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvMenuInfoBookmark"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/ivMenuMypage"
+        android:textColor="#66FFFFFF"
+        app:layout_heightPercent="2%"
+        app:layout_marginLeftPercent="47%"
+        app:layout_marginTopPercent="1.1%"
+        app:layout_widthPercent="40%" />
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvMenuInfoDownload"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/ivMenuMypage"
+        android:textColor="#66FFFFFF"
+        app:layout_heightPercent="2%"
+        app:layout_marginLeftPercent="47%"
+        app:layout_marginTopPercent="3.4%"
+        app:layout_widthPercent="40%" />
+    <!-- 78 x 88 -->
+    <ImageView
+        android:id="@+id/ivMenuSearch"
+        style="@style/MainMenuImage"
+        android:layout_below="@id/ivMenuMypage"
+        android:background="@drawable/selector_main_search"
+        android:focusable="true"
+        app:layout_heightPercent="8.1481%"
+        app:layout_marginLeftPercent="10.6414%"
+        app:layout_marginTopPercent="6.4815%"
+        app:layout_widthPercent="22.7405%" />
+
+    <!-- 61 x 87 -->
+    <ImageView
+        android:id="@+id/ivMenuSetup"
+        style="@style/MainMenuImage"
+        android:layout_below="@id/ivMenuSearch"
+        android:background="@drawable/selector_main_setup"
+        android:focusable="true"
+        app:layout_heightPercent="8.0556%"
+        app:layout_marginLeftPercent="13.1195%"
+        app:layout_marginTopPercent="6.4815%"
+        app:layout_widthPercent="17.7842%" />
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvMenuInfoIP"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/ivMenuSetup"
+        android:textColor="#66FFFFFF"
+        app:layout_heightPercent="2%"
+        app:layout_marginLeftPercent="47%"
+        app:layout_marginTopPercent="1.5%"
+        app:layout_widthPercent="50%" />
+
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvMenuInfoResolution"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/ivMenuSetup"
+        android:textColor="#66FFFFFF"
+        app:layout_heightPercent="2%"
+        app:layout_marginLeftPercent="47%"
+        app:layout_marginTopPercent="3.8%"
+        app:layout_widthPercent="40%" />
+</android.support.percent.PercentRelativeLayout>

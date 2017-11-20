@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutHome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 전체 1695 x 870 중에서 1517 x 870만 사용한다.-->
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="100%"
+        app:layout_widthPercent="89.4985%">
+
+        <LinearLayout
+            android:id="@+id/homeTodaySchedule"
+            android:layout_width="440px"
+            android:layout_height="656px"
+            android:background="@drawable/selector_home_box"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:nextFocusDown="@+id/homeSearch"
+            android:nextFocusRight="@+id/homeRecentVOD"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="360px"
+                android:layout_height="30px"
+                android:layout_marginTop="38px"
+                android:includeFontPadding="false"
+                android:text="@string/str_home_box_today_schedule"
+                android:textColor="@color/white"
+                android:textSize="27px"
+                android:textStyle="bold" />
+
+            <ViewFlipper
+                android:id="@+id/vfTodayScheduleFlipper"
+                android:layout_width="360px"
+                android:layout_height="467px"
+                android:layout_marginTop="30px"
+                android:inAnimation="@anim/menu_slide_in"
+                android:outAnimation="@anim/menu_slide_out"/>
+
+            <LinearLayout
+                android:id="@+id/todayScheduleRolling"
+                android:layout_width="360px"
+                android:layout_height="18px"
+                android:layout_marginTop="40px"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/homeSearch"
+            android:layout_width="440px"
+            android:layout_height="183px"
+            android:layout_alignLeft="@+id/homeTodaySchedule"
+            android:layout_below="@+id/homeTodaySchedule"
+            android:layout_marginTop="30px"
+            android:background="@drawable/selector_home_box"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+
+            android:nextFocusRight="@+id/homeMostVOD"
+            android:nextFocusUp="@+id/homeTodaySchedule"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="360px"
+                android:layout_height="30px"
+                android:layout_marginTop="38px"
+                android:includeFontPadding="false"
+                android:text="@string/str_home_box_search"
+                android:textColor="@color/white"
+                android:textSize="27px"
+                android:textStyle="bold" />
+
+            <com.inucreative.sednlauncher.CustomView.SednAutoCompleteTextView
+                android:id="@+id/homeSearchBox"
+                android:layout_width="360px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:backgroundTint="@color/white"
+                android:completionThreshold="1"
+                android:dropDownVerticalOffset="0dp"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="33px"
+                android:layout_height="35px"
+                android:layout_gravity="right"
+                android:layout_marginRight="45px"
+                android:layout_marginTop="-55px"
+                android:src="@drawable/search_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/homeRecentVOD"
+            android:layout_width="1030px"
+            android:layout_height="418px"
+            android:layout_alignTop="@+id/homeTodaySchedule"
+            android:layout_marginLeft="30px"
+            android:layout_toRightOf="@+id/homeTodaySchedule"
+            android:background="@drawable/selector_home_box"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:nextFocusDown="@+id/homeMostVOD"
+            android:nextFocusLeft="@+id/homeTodaySchedule"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="950px"
+                android:layout_height="30px"
+                android:layout_marginTop="38px"
+                android:includeFontPadding="false"
+                android:text="@string/str_home_box_recent_vod"
+                android:textColor="@color/white"
+                android:textSize="27px"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="950px"
+                android:layout_height="251px"
+                android:layout_marginTop="30px">
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollRecentVOD"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/layoutRecentVOD"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="horizontal"
+                        android:paddingLeft="295px"
+                        android:paddingRight="258px"/>
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/recentFocusBox"
+                    android:layout_width="360px"
+                    android:layout_height="251px"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/border_home_vod"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="950px"
+                android:layout_height="7px"
+                android:layout_marginTop="25px"
+                android:scaleType="fitXY"
+                android:src="@drawable/vodlist_selectlist_line" />
+
+            <HorizontalScrollView
+                android:id="@+id/recentVODPosition"
+                android:layout_width="950px"
+                android:layout_height="20px"
+                android:layout_marginTop="-17px"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="898px"
+                    android:paddingRight="898px">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20px"
+                        android:src="@drawable/vodlist_select" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/homeMostVOD"
+            android:layout_width="480px"
+            android:layout_height="421px"
+            android:layout_alignLeft="@+id/homeRecentVOD"
+            android:layout_below="@+id/homeRecentVOD"
+            android:layout_marginTop="30px"
+            android:background="@drawable/selector_home_box"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:nextFocusLeft="@+id/homeSearch"
+            android:nextFocusUp="@+id/homeRecentVOD"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="400px"
+                android:layout_height="30px"
+                android:layout_marginTop="38px"
+                android:includeFontPadding="false"
+                android:text="@string/str_home_box_most_vod"
+                android:textColor="@color/white"
+                android:textSize="27px"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMostVOD"
+            android:layout_width="490px"
+            android:layout_height="310px"
+            android:layout_alignLeft="@+id/homeMostVOD"
+            android:layout_alignTop="@+id/homeMostVOD"
+            android:layout_marginLeft="-1px"
+            android:layout_marginTop="111px"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"/>
+
+        <ImageView
+            android:id="@+id/homeBanner1"
+            android:layout_width="520px"
+            android:layout_height="153px"
+            android:layout_alignTop="@+id/homeMostVOD"
+            android:layout_marginLeft="30px"
+            android:layout_toRightOf="@+id/homeMostVOD"
+            android:background="@drawable/notice_box"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/homeBanner2"
+            android:layout_width="520px"
+            android:layout_height="238px"
+            android:layout_alignLeft="@+id/homeBanner1"
+            android:layout_below="@+id/homeBanner1"
+            android:layout_marginTop="30px"
+            android:background="@drawable/notice_box"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

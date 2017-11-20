@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutMyPage">
+    <!-- 전체 1695 x 870 -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/quickMenuBGColor"/>
+
+    <!-- MY PAGE 문구 150x45 -->
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="11%"
+        app:layout_heightPercent="5.0575%"
+        app:layout_marginLeftPercent="3.5398%"
+        app:layout_marginTopPercent="6.6667%"
+        android:gravity="left|top"
+        android:text="MY PAGE"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:textSizePercent="100"
+        app:adjustTopForAscent="true"/>
+
+    <!-- BOOKMARK LIST 210 x 33 -->
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/layoutBookmarkList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="12.3894%"
+        app:layout_heightPercent="3.7931%"
+        app:layout_marginLeftPercent="16.2832%"
+        app:layout_marginTopPercent="6.8966%"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/selector_mypage_bookmark_tab">
+        <ImageView
+            android:id="@+id/ivMypageBookmarkTab"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="9.5238%"
+            app:layout_heightPercent="60.6061%"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            app:layout_marginLeftPercent="6.1915%"
+            app:layout_marginTopPercent="21.2121%"
+            android:duplicateParentState="true"
+            android:background="@drawable/icon_bookmark_tab"/>
+        <!-- 167 x 33 -->
+        <com.inucreative.sednlauncher.CustomView.ASTextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="79.5238%"
+            app:layout_heightPercent="66%"
+            android:layout_toRightOf="@id/ivMypageBookmarkTab"
+            android:layout_alignParentTop="true"
+            app:layout_marginLeftPercent="4.2867%"
+            app:layout_marginTopPercent="27.2727%"
+            android:duplicateParentState="true"
+            android:text="BOOKMARK LIST"
+            android:textColor="@color/selector_mypage_tab_text"
+            android:textStyle="bold"
+            app:textSizePercent="98"
+            app:adjustTopForAscent="true"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <!-- DOWNLOAD LIST 210 x 33 -->
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/layoutDownloadList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="12.3894%"
+        app:layout_heightPercent="3.7931%"
+        android:layout_toRightOf="@+id/layoutBookmarkList"
+        android:layout_alignTop="@+id/layoutBookmarkList"
+        app:layout_marginLeftPercent="0.4130%"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/selector_mypage_download_tab">
+        <ImageView
+            android:id="@+id/ivMypageDownloadTab"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="9.5238%"
+            app:layout_heightPercent="60.6061%"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            app:layout_marginLeftPercent="6.1915%"
+            app:layout_marginTopPercent="21.2121%"
+            android:duplicateParentState="true"
+            android:background="@drawable/icon_download_tab"/>
+        <!-- 167 x 33 -->
+        <com.inucreative.sednlauncher.CustomView.ASTextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="79.5238%"
+            app:layout_heightPercent="66%"
+            android:layout_toRightOf="@id/ivMypageDownloadTab"
+            android:layout_alignParentTop="true"
+            app:layout_marginLeftPercent="4.2867%"
+            app:layout_marginTopPercent="27.2727%"
+            android:duplicateParentState="true"
+            android:text="DOWNLOAD LIST"
+            android:textColor="@color/selector_mypage_tab_text"
+            android:textStyle="bold"
+            app:textSizePercent="98"
+            app:adjustTopForAscent="true"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <!-- 935 x 510=(60x7+15*6) , (below 60, 45)-->
+    <!-- 화살표 45 x 30 -->
+    <ListView
+        android:id="@+id/lvMypageItems"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="55.1622%"
+        app:layout_heightPercent="58.6207%"
+        app:layout_marginTopPercent="21.3793%"
+        app:layout_marginLeftPercent="3.5398%"
+        android:divider="@android:color/transparent"
+        android:choiceMode="singleChoice"
+        />
+    <ImageView
+        android:id="@+id/ivMyPageItemUpArrow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="52.5074%"
+        app:layout_heightPercent="3.4483%"
+        android:layout_below="@id/lvMypageItems"
+        android:layout_alignRight="@id/lvMypageItems"
+        app:layout_marginTopPercent="9.5402%"
+        android:visibility="invisible"
+        android:src="@drawable/btn_up"/>
+    <ImageView
+        android:id="@+id/ivMyPageItemDownArrow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="52.5074%"
+        app:layout_heightPercent="3.4483%"
+        android:layout_below="@id/lvMypageItems"
+        android:layout_alignLeft="@id/lvMypageItems"
+        app:layout_marginTopPercent="9.5402%"
+        android:visibility="invisible"
+        android:src="@drawable/btn_next"/>
+
+    <!-- 컨텐츠 미리보기 596 x 424 (toRightof, alignTop 30, 54)-->
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/mypage_content_preview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="35.1622%"
+        app:layout_heightPercent="42.5287%"
+        android:layout_toRightOf="@id/lvMypageItems"
+        android:layout_alignTop="@id/lvMypageItems"
+        app:layout_marginLeftPercent="2.6549%"
+        android:visibility="invisible">
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/content_preview"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <!-- 컨텐츠 정보 상세보기 296 x 269-->
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/mypage_content_info"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="17.4631%"
+        app:layout_heightPercent="30.9195%"
+        app:layout_marginLeftPercent="78.8%"
+        app:layout_marginTopPercent="62.3931%"
+        android:visibility="invisible">
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/content_info"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <!-- Bookmark 컨텐츠 없을 경우 문구 500x500 -->
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/mypage_no_bookmark"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="29.4985%"
+        app:layout_heightPercent="57.4713%"
+        app:layout_marginLeftPercent="35.2212%"
+        app:layout_marginTopPercent="21.2644%"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/ivNoBookmark"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="32%"
+            app:layout_heightPercent="32%"
+            app:layout_marginLeftPercent="34%"
+            app:layout_marginTopPercent="20%"
+            android:background="@drawable/icon_none_bookmark"/>
+        <com.inucreative.sednlauncher.CustomView.ASTextView
+            android:id="@+id/tvNoBookmark1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="100%"
+            app:layout_heightPercent="6.5%"
+            android:layout_below="@+id/ivNoBookmark"
+            app:layout_marginTopPercent="7%"
+            android:text="BOOKMARK한 컨텐츠가 없습니다."
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+        <com.inucreative.sednlauncher.CustomView.ASTextView
+            android:id="@+id/tvNoBookmark2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="100%"
+            app:layout_heightPercent="4.5%"
+            android:layout_below="@+id/tvNoBookmark1"
+            app:layout_marginTopPercent="5%"
+            android:text="자주 시청하는 컨텐츠를 북마크하여"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:textSizePercent="90"/>
+        <com.inucreative.sednlauncher.CustomView.ASTextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="100%"
+            app:layout_heightPercent="4.5%"
+            android:layout_below="@+id/tvNoBookmark2"
+            app:layout_marginTopPercent="1%"
+            android:text="쉽고 편리하게 이용하세요!"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:textSizePercent="90"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <!-- Download 컨텐츠 없을 경우 문구 -->
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/mypage_no_download"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="29.4985%"
+        app:layout_heightPercent="57.4713%"
+        app:layout_marginLeftPercent="35.2212%"
+        app:layout_marginTopPercent="21.2644%"
+        android:visibility="gone">
+    <ImageView
+        android:id="@+id/ivNoDownload"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="32%"
+        app:layout_heightPercent="32%"
+        app:layout_marginLeftPercent="34%"
+        app:layout_marginTopPercent="20%"
+        android:background="@drawable/icon_none_download"/>
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvNoDownload1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="100%"
+        app:layout_heightPercent="6.5%"
+        android:layout_below="@+id/ivNoDownload"
+        app:layout_marginTopPercent="7%"
+        android:text="DOWNLOAD한 컨텐츠가 없습니다."
+        android:textAlignment="center"
+        android:textColor="@color/white"/>
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:id="@+id/tvNoDownload2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="100%"
+        app:layout_heightPercent="4.5%"
+        android:layout_below="@+id/tvNoDownload1"
+        app:layout_marginTopPercent="5%"
+        android:text="자주 시청하는 컨텐츠를 다운로드하여"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:textSizePercent="90"/>
+    <com.inucreative.sednlauncher.CustomView.ASTextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="100%"
+        app:layout_heightPercent="4.5%"
+        android:layout_below="@+id/tvNoDownload2"
+        app:layout_marginTopPercent="1%"
+        android:text="쉽고 편리하게 이용하세요!"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:textSizePercent="90"/>
+    </android.support.percent.PercentRelativeLayout>
+</android.support.percent.PercentRelativeLayout>

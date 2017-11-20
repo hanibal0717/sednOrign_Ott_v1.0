@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutSetupSystemReboot"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/tvSetupSystemReboot1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="55px"
+        android:layout_marginTop="128px"
+        android:text="@string/str_setup_system_reboot1"
+        android:textColor="@color/white"
+        android:textSize="22px"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSetupSystemReboot1"
+        android:layout_marginLeft="55px"
+        android:layout_marginTop="10px"
+        android:text="@string/str_setup_system_reboot2"
+        android:textColor="@color/white"
+        android:textSize="22px"/>
+
+    <TextView
+        android:id="@+id/tvSetupSystemRebootConfirm"
+        android:layout_width="150px"
+        android:layout_height="53px"
+        android:layout_marginLeft="842px"
+        android:layout_marginTop="546px"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@drawable/selector_setup_button_save"
+        android:gravity="center"
+        android:text="@string/str_setup_confirm"
+        android:textColor="@color/white"
+        android:nextFocusRight="@+id/tvSetupSystemRebootCancel"
+        android:textSize="22px"/>
+    <TextView
+        android:id="@+id/tvSetupSystemRebootCancel"
+        android:layout_width="150px"
+        android:layout_height="53px"
+        android:layout_toRightOf="@+id/tvSetupSystemRebootConfirm"
+        android:layout_alignTop="@+id/tvSetupSystemRebootConfirm"
+        android:layout_marginLeft="10px"
+        android:background="@drawable/selector_setup_button_cancel"
+        android:gravity="center"
+        android:focusable="true"
+        android:text="@string/str_setup_cancel"
+        android:textColor="@color/white"
+        android:nextFocusLeft="@+id/tvSetupSystemRebootConfirm"
+        android:textSize="22px"/>
+</android.support.percent.PercentRelativeLayout>
